@@ -9,7 +9,7 @@ const ListaDeProjetos = () => {
     const VOTACAO_BACKEND = "https://github.com/Pedro-Cecilio/votacao-react-java-Backend";
     const VOTACAO_FRONTEND = "https://github.com/Pedro-Cecilio/votacao-react-java-Frontend";
     const VOTACAO_RESTASSURED = "https://github.com/Pedro-Cecilio/votacao-react-java-RestAssured";
-    const VOTACAO_SELENIUM = "https://github.com/Pedro-Cecilio/votacao-react-java-RestAssured";
+    const VOTACAO_SELENIUM = "https://github.com/Pedro-Cecilio/votacao-react-java-Selenium";
     return (
         <Flex justifyContent={"center"} wrap={"wrap"} gap={20}>
             <CardProjeto
@@ -42,7 +42,7 @@ const ListaDeProjetos = () => {
                 titulo="Votação testes E2E"
                 tecnologias="Java, Selenium"
                 descricao="Esse projeto tem como objetivo fornecer testes E2E para Votação Front-end e Votação Back-end, permitindo validar o bom funcionament da aplicação como um todo."
-                link={VOTACAO_FRONTEND}
+                link={VOTACAO_SELENIUM}
             />
         </Flex>
     );
