@@ -38,7 +38,7 @@ const Cabecalho = () => {
 
     return (
         <Flex bg={"azul.100"} h={"87px"} fontFamily={"supermolotBold"} pl={8} pr={10} mb={"70px"} justifyContent={"space-between"}>
-            <Flex mr={8}>
+            <Flex mr={8} alignItems={"center"}>
                 <Link onClick={navegarDB}><Logo /></Link>
             </Flex>
 
