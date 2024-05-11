@@ -1,20 +1,15 @@
-import { Link as ReactRouterLink } from 'react-router-dom'
-import { Link as ChakraLink } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { ReactNode } from 'react';
 interface LinkProps {
-    to: string;
     children: ReactNode;
-    backgroundColor?: string;
-    novaAba?: boolean;
+    onClick: () => void;
 }
-const Link = ({ to, children, backgroundColor = "azul.200", novaAba = false }: LinkProps) => {
+const Link = ({ children, onClick }: LinkProps) => {
 
     return (
-        <ChakraLink
-            target={novaAba ? "_blank" : "_self"}
-            as={ReactRouterLink}
-            to={to}
-            _hover={{ textDecoration: "none", backgroundColor: backgroundColor }}
+        <Box
+            onClick={onClick}
+            cursor={"pointer"}
             textColor={"azul.700"} fontWeight={400}
             display={'flex'}
             flex={1}
@@ -23,7 +18,7 @@ const Link = ({ to, children, backgroundColor = "azul.200", novaAba = false }: L
             rounded={"8px"}
             fontSize={"18px"}>
             {children}
-        </ChakraLink>
+        </Box>
     );
 
 }

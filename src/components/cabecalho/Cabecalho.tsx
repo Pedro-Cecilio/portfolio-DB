@@ -3,30 +3,35 @@ import Logo from "../logo/Logo";
 import Link from "../Link/Link";
 import gitHub from "../../assets/gitHub.svg"
 import linkedin from "../../assets/linkedin.svg"
+import curriculoPDF from "../../assets/Pedro_Currículo.pdf"
 import { ExternalLinkIcon, HamburgerIcon, InfoOutlineIcon, StarIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 
 const Cabecalho = () => {
     const GIT_HUB = "https://github.com/Pedro-Cecilio";
     const LINKEDIN = "https://www.linkedin.com/in/pedro-cecilio-8978aa281/";
+    const DB_SERVER = "https://db.tec.br/";
     const navigate = useNavigate();
     const mostrarMenuBurger = useBreakpointValue<boolean>({ base: true, md: false }, {
         ssr: false
     });
 
-    const navegarProjetos = ()=>{
+    const navegarProjetos = () => {
         navigate("/projetos");
     }
-    const navegarSobre = ()=>{
+    const navegarSobre = () => {
         navigate("/");
     }
-    const navegarCurriculo = ()=>{
-        navigate("/");
+    const navegarCurriculo = () => {
+        window.open(curriculoPDF);
     }
-    const navegarGitHub = ()=>{
+    const navegarDB = () => {
+        window.open(DB_SERVER);
+    }
+    const navegarGitHub = () => {
         window.open(GIT_HUB);
     }
-    const navegarLinkedin = ()=>{
+    const navegarLinkedin = () => {
         window.open(LINKEDIN);
     }
 
@@ -34,7 +39,7 @@ const Cabecalho = () => {
     return (
         <Flex bg={"azul.100"} h={"87px"} fontFamily={"supermolotBold"} pl={8} pr={10} mb={"70px"} justifyContent={"space-between"}>
             <Flex mr={8}>
-                <Link to="https://db.tec.br/" backgroundColor="none"><Logo /></Link>
+                <Link onClick={navegarDB}><Logo /></Link>
             </Flex>
 
             {mostrarMenuBurger ?
@@ -64,7 +69,7 @@ const Cabecalho = () => {
                                 Projetos
                             </MenuItem>
 
-                            <MenuItem icon={<ExternalLinkIcon />} bg={"azul.200"} _hover={{ backgroundColor: "white", color: "azul.700" }} fontWeight={"bold"} p={4}onClick={navegarGitHub}>
+                            <MenuItem icon={<ExternalLinkIcon />} bg={"azul.200"} _hover={{ backgroundColor: "white", color: "azul.700" }} fontWeight={"bold"} p={4} onClick={navegarGitHub}>
                                 GitHub
                             </MenuItem>
 
@@ -79,16 +84,16 @@ const Cabecalho = () => {
                 <Flex justifyContent={"space-between"} alignItems={"center"} wrap={"wrap"} w={"full"}>
                     <Flex justifyContent={"space-around"} gap={8}>
                         <Flex alignItems={"center"} justifyContent={"space-between"} gap={8}>
-                            <Link to={"/"}>Sobre</Link>
-                            <Link to={"/"}>Curriculo</Link>
-                            <Link to={"/projetos"}>Projetos</Link>
+                            <Link onClick={navegarSobre}>Sobre</Link>
+                            <Link onClick={navegarCurriculo}>Curriculo</Link>
+                            <Link onClick={navegarProjetos}>Projetos</Link>
                         </Flex>
                     </Flex>
 
 
                     <Flex alignItems={"center"} gap={4} w={"8rem"} h={"2.75rem"}>
-                        <Link to={GIT_HUB} novaAba={true}><Image src={gitHub} w={6} /></Link>
-                        <Link to={LINKEDIN} novaAba={true}><Image src={linkedin} w={6} /></Link>
+                        <Link onClick={navegarGitHub}><Image src={gitHub} w={6} /></Link>
+                        <Link onClick={navegarLinkedin}><Image src={linkedin} w={6} /></Link>
                     </Flex>
                 </Flex >
             }
