@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Supermolot Bold';
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/supermolot-bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Supermolot Regular';
+    font-style: normal;
+    font-display: swap;
+    src: url('./fonts/supermolot-regular.ttf') format('truetype');
+}
+
+*{
+    box-sizing: border-box;
+}
