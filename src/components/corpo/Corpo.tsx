@@ -1,7 +1,7 @@
 import {Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import Apresentacao from "../apresentacao/Apresentacao";
 import SobreMim from "../sobreMim/SobreMim";
-import foto from "../../assets/foto.svg"
+import foto from "../../assets/foto.jpg"
 import Habilidades from "../listaDeHabilidades/ListaDeHabilidades";
 const Corpo = () => {
 
@@ -15,7 +15,7 @@ const Corpo = () => {
                     <Apresentacao /> 
                 </GridItem>
                 <GridItem colSpan={1} h={{md: "330px"}}>
-                    <Image src={foto} />
+                    <Image src={foto} w={567} h={292}/>
                 </GridItem>
                 <GridItem colSpan={1}>
                     <SobreMim /> 
