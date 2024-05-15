@@ -3,7 +3,7 @@ import Logo from "../logo/Logo";
 import Link from "../Link/Link";
 import gitHub from "../../assets/gitHub.svg"
 import linkedin from "../../assets/linkedin.svg"
-import curriculoPDF from "../../assets/Pedro_Currículo.pdf"
+import curriculoPDF from "../../assets/Pedro_Cecilio_Desenvolvedor.pdf"
 import { ExternalLinkIcon, HamburgerIcon, InfoOutlineIcon, StarIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 
