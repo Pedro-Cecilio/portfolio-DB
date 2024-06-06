@@ -14,6 +14,7 @@ const ListaDeHabilidades = () => {
                 <Habilidade texto="Spring Security" imagem={habilidade3} />
                 <Habilidade texto="Flyway" imagem={habilidade3} />
                 <Habilidade texto="React" imagem={habilidade3} />
+                <Habilidade texto="Node" imagem={habilidade3} />
                 <Habilidade texto="Typescript" imagem={habilidade3} />
                 <Habilidade texto="HTML" imagem={habilidade3} />
                 <Habilidade texto="CSS" imagem={habilidade3} />
