@@ -3,6 +3,7 @@ import votacaoBackend from "../../assets/votacaoBackend.svg"
 import votacaoFrontend from "../../assets/votacaoFrontend.svg"
 import imagemApi from "../../assets/imagemApi.svg"
 import imagemTestes from "../../assets/imagemTestes.svg"
+import telefone from "../../assets/telefone.svg"
 import { Flex } from "@chakra-ui/react";
 
 const ListaDeProjetos = () => {
@@ -10,6 +11,7 @@ const ListaDeProjetos = () => {
     const VOTACAO_FRONTEND = "https://github.com/Pedro-Cecilio/votacao-react-java-Frontend";
     const VOTACAO_RESTASSURED = "https://github.com/Pedro-Cecilio/votacao-react-java-RestAssured";
     const VOTACAO_SELENIUM = "https://github.com/Pedro-Cecilio/votacao-react-java-Selenium";
+    const AGENDA_TELEFONICA = "https://github.com/Pedro-Cecilio/agenda-telefonica-backend";
     return (
         <Flex justifyContent={"center"} wrap={"wrap"} gap={20}>
             <CardProjeto
@@ -43,6 +45,14 @@ const ListaDeProjetos = () => {
                 tecnologias="Java, Selenium"
                 descricao="Esse projeto tem como objetivo fornecer testes E2E para Votação Front-end e Votação Back-end, permitindo validar o bom funcionament da aplicação como um todo."
                 link={VOTACAO_SELENIUM}
+            />
+            <CardProjeto
+                imagem={telefone}
+                alt="Telefone antigo preto"
+                titulo="Agenda telefônica NodeJS"
+                tecnologias="NodeJS, Typescript, Fastify"
+                descricao="Este projeto é uma aplicação de agenda telefônica utilizando Fastify, onde é possível gerenciar contatos e seus respectivos telefones."
+                link={AGENDA_TELEFONICA}
             />
         </Flex>
     );
