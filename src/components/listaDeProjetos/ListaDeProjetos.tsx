@@ -4,6 +4,7 @@ import votacaoFrontend from "../../assets/votacaoFrontend.svg"
 import imagemApi from "../../assets/imagemApi.svg"
 import imagemTestes from "../../assets/imagemTestes.svg"
 import telefone from "../../assets/telefone.svg"
+import votacaoNode from "../../assets/votacaoNode.svg"
 import { Flex } from "@chakra-ui/react";
 
 const ListaDeProjetos = () => {
@@ -12,6 +13,7 @@ const ListaDeProjetos = () => {
     const VOTACAO_RESTASSURED = "https://github.com/Pedro-Cecilio/votacao-react-java-RestAssured";
     const VOTACAO_SELENIUM = "https://github.com/Pedro-Cecilio/votacao-react-java-Selenium";
     const AGENDA_TELEFONICA = "https://github.com/Pedro-Cecilio/agenda-telefonica-backend";
+    const VOTACAO_NODE = "https://github.com/Pedro-Cecilio/desafio-votacao-backend-node";
     return (
         <Flex justifyContent={"center"} wrap={"wrap"} gap={20}>
             <CardProjeto
@@ -53,6 +55,14 @@ const ListaDeProjetos = () => {
                 tecnologias="NodeJS, Typescript, Fastify"
                 descricao="Este projeto é uma aplicação de agenda telefônica utilizando Fastify, onde é possível gerenciar contatos e seus respectivos telefones."
                 link={AGENDA_TELEFONICA}
+            />
+            <CardProjeto
+                imagem={votacaoNode}
+                alt="Imagem de uma urna de votos"
+                titulo="Votação NodeJS"
+                tecnologias="NodeJS, Typescript, Fastify"
+                descricao="O Projeto Votação Back-end é uma solução que simplifica a gestão e participação em votações. Administradores podem criar e gerenciar usuários, pautas e sessões de votação."
+                link={VOTACAO_NODE}
             />
         </Flex>
     );
