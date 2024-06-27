@@ -15,7 +15,10 @@ const Corpo = () => {
                     <Apresentacao /> 
                 </GridItem>
                 <GridItem colSpan={1} h={{md: "330px"}}>
-                    <Image src={foto} w={567} h={292}/>
+                    <Image src={foto} w={567} h={292} style={{
+                        objectFit: "cover",
+                        objectPosition: "0% 32%"
+                    }}/>
                 </GridItem>
                 <GridItem colSpan={1}>
                     <SobreMim /> 
